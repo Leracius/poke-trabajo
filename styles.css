@@ -11,8 +11,8 @@ header{
     background: red;
 }
 #img-container{
+    border-radius: 10px 10px 0 0;
     background-image: url(./assets/poke-background.jpg);
-    border-radius: 10px;
 }
 #poke-logo{
     width: 20%;
@@ -68,7 +68,7 @@ h2{
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 18px;
-    margin: 0 15px 0 15px;
+    margin: 5px 35px 5px 35px;
 }
 #name-h2{
     text-align: center;
