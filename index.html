@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="./assets/pikachu-favicon.png" type="image/x-icon">
 </head>
-<body>
+<body>  
+    <div id="info-user"><p>TOQUE DENTRO DEL POKEMON PARA VER SUS NOMBRE Y CARACTERISTICAS. TOQUE POR FUERA PARA VOLVER A VER SU IMAGEN</p>
+        <button id="x-button">x</button>
+    </div>
         <header>
             <div><img id="poke-logo" src="./assets/poke-logo.png" alt=""></div>
             <button type="number" id="button">🔎</button>
@@ -19,11 +22,11 @@
             <!-- <div id="error">Ingrese un numero</div> -->
             <!-- <div id="error">No se encontro el pokemon</div> -->
             <div id="card">
-            <div id="container"></div>
+            <div id="front"></div>
             <!-- <div id="img-container">
                 <img src=${call.sprites.other.home.front_default} alt="pokeimg">
             </div> -->
-            <div id ="poke-information"></div>
+            <div id ="back"></div>
             <!-- <h2 id="name-h2"></h2> -->
             <!-- <h2 id="type-h2"></h2> -->
             <!-- <h2 id="height-h2"></h2> -->

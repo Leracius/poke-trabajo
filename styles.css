@@ -5,14 +5,18 @@ body{
 header{
     justify-content:space-between;
     align-items: center;
-    height: 80px;
+    height: 85px;
     display: flex;
     width: 100vw;
     background: red;
 }
 #img-container{
-    border-radius: 10px 10px 0 0;
-    background-image: url(./assets/poke-background.jpg);
+    background: radial-gradient(circle, rgba(172,126,162,1) 0%, rgba(42,40,159,1) 49%, rgba(68,63,66,1) 92%);
+    border-radius: 10px;
+}
+#img-container img{
+    width: 300px;
+    height: 300px;
 }
 #poke-logo{
     width: 20%;
@@ -35,7 +39,6 @@ header{
     border-radius: 10px 0 0 10px;
     border: none;
     height: 41px;
-    
 }
 section{
     flex-direction: column;
@@ -43,37 +46,176 @@ section{
     align-items: center;
     justify-content: center;
 }
-#error{
-    margin-top: 10px;
-    background-color: red;
+#x-button{
+    justify-self: end;
+    border: none;
+    background-color: black;
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#card{
-    margin-top: 10px;
-    border-radius: 15px;
-    background-color: white;
-    width: 700px;
+#info-user{
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    background-color: black;
 
 }
-#poke-information{
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 30px;
+p{
+    color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
 }
-h2{
+#error{
+    margin-top: 5px;
+    background-color: red;
+    padding: 0 5px 0 5px;
+    font-size: 15px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*------------------------- FLIP CARD------------------------- */
+
+#card {
+    margin-top: 1em;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+#card div {
+    backface-visibility: hidden;
+    transition: 1s;
+}
+#back {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+    /* background: radial-gradient(circle, rgba(172,126,162,1) 0%, rgba(42,40,159,1) 49%, rgba(68,63,66,1) 92%); */
+    position: absolute;
+   
+}
+#front {
+    border-radius: 15px;
+    /* background-image: url(./assets/poke-background.jpg); */
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+   
+}
+
+#front {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+#back {
+    transform: perspective(800px) rotateY(180deg);
+}
+
+#card:hover #front {
+    transform: perspective(800px) rotateY(180deg);
+}
+#card:hover #back {
+    transform: perspective(800px) rotateY(360deg);
+}
+
+h2{
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 18px;
-    margin: 5px 35px 5px 35px;
+    text-align: center;
+    margin: 0;
+    margin: 3px;
 }
 #name-h2{
     text-align: center;
     font-size: 30px;
 }
+
+/* -----------------TYPES---------------------------- */
+span{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.normal {
+    background-color: #aa9;
+  }
+  
+  .fire {
+    background-color: #f42;
+  }
+  
+  .grass {
+    background-color: #7c5;
+  }
+  
+  .poison {
+    background-color: #a59;
+  }
+  
+  .water {
+    background-color: #39f;
+  }
+  
+  .electric {
+    background-color: #fc3;
+  }
+  
+  .ice {
+    background-color: #6cf;
+  }
+  
+  .fighting {
+    background-color: #b54;
+  }
+  
+  .ground {
+    background-color: #db5;
+  }
+  
+  .flying {
+    background-color: #89f;
+  }
+  
+  .psychic {
+    background-color: #f59;
+  }
+  
+  .bug {
+    background-color: #ab2;
+  }
+  
+  .rock {
+    background-color: #ba6;
+  }
+  
+  .ghost {
+    background-color: #66b;
+  }
+  
+  .dragon {
+    background-color: #76e;
+  }
+  
+  .dark {
+    background-color: rgb(7, 3, 1);
+  }
+  
+  .steel {
+    background-color: #aab;
+  }
+  
+  .fairy {
+    background-color: #e9e;
+  }
+  
 
 @media only screen and (max-width: 500px){
     header{
@@ -92,20 +234,11 @@ h2{
         height: 85%;
     }
     #card{
-        
-        border-radius: 15px;
-        background-color: black;
         width: 85%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
     
-    }
-    #poke-information{
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 15px;
-        margin: 0;
     }
 }
