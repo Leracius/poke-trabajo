@@ -6,6 +6,8 @@ const pokeInput = document.getElementById("input")
 const xButton = document.getElementById("x-button")
 const infoUser = document.getElementById("info-user")
 
+
+
 xButton.addEventListener("click",()=>infoUser.style.display="none")
 
 const pokeSet =(data)=>{
@@ -30,11 +32,11 @@ const addImg = (call)=>{
   pokeInfo.style.background="radial-gradient(circle, rgba(172,126,162,1) 0%, rgba(42,40,159,1) 49%, rgba(68,63,66,1) 92%)"
 }
 
-const showError =(text)=>{
+const showMessage =(text,num)=>{
     section.innerHTML=`<div id="error">${text}</div>`  
     setTimeout(()=>{
       section.innerHTML=""
-      },2000)
+      },num)
 }
 
 const callApi = async()=>{
@@ -50,10 +52,11 @@ const valid = ()=>{
   console.log(cont);
   if(cont=="")showError("Por favor ingrese un numero")
   else if(cont<899&&cont>0)callApi()
-  else(showError("No se encontro ningun pokemon"))
+  else(showMessage("No se encontro ningun pokemon",2000))
 }
 
 button.addEventListener("click",()=>(valid()))
 
+showMessage("Ingrese un numero y toque la lupa para buscar al pokemon por su id",5000)
 
 
