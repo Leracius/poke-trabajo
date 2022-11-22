@@ -51,7 +51,7 @@ const callApi = async()=>{
 const valid = ()=>{
   let cont = pokeInput.value
   console.log(cont);
-  if(cont=="")showError("Por favor ingrese un numero")
+  if(cont=="")showMessage("Por favor ingrese un numero",2000)
   else if(cont<899&&cont>0)callApi()
   else(showMessage("No se encontro ningun pokemon",2000))
 }
