@@ -1,7 +1,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-color:rgb(0, 0, 0);
+    background-image: url(./assets/poke-background.gif);
+    background-repeat: no-repeat0;
+    background-size: cover;
 }
 header{
     justify-content:space-between;
@@ -9,15 +11,15 @@ header{
     height: 85px;
     display: flex;
     width: 100vw;
-    background: radial-gradient(circle, rgba(42,42,255,1) 0%, rgba(21,31,43,1) 100%);
+    background: linear-gradient( rgb(0, 0, 0) 0%, rgba(21, 31, 43, 0) 100%);
 }
 #img-container{
-    background: radial-gradient(circle, rgba(172,126,162,1) 0%, rgba(42,40,159,1) 49%, rgba(68,63,66,1) 92%);
+    background: radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0.267) 100%);
     border-radius: 10px;
 }
 #img-container img{
     width: 300px;
-    height: 300px;
+    height: 300px
 }
 #poke-logo{
     width: 20%;
@@ -74,10 +76,11 @@ p{
     font-size: 10px;
 }
 #error{
-    margin-top: 1em;
-    background-color: red;
+    margin: 1em;
+    background-color: rgb(17, 184, 11);
     padding: 0 5px 0 5px;
     font-size: 15px;
+    text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -119,11 +122,9 @@ p{
 #front {
     transform: perspective(800px) rotateY(0deg);
 }
-
 #back {
     transform: perspective(800px) rotateY(180deg);
 }
-
 #card:hover #front {
     transform: perspective(800px) rotateY(180deg);
 }
@@ -225,6 +226,9 @@ span{
   
 
 @media only screen and (max-width: 500px){
+    body{
+      background-position: center;
+    }
     header{
         justify-content:center;
         align-items: center;
@@ -234,7 +238,6 @@ span{
     }
     section{
       height: 100vh;
-      background-image: url(./assets/mobile-poke-background.jpg);
       background-repeat: no-repeat;
       background-size: contain;
       flex-direction: column;

@@ -29,7 +29,8 @@ const addImg = (call)=>{
               <img id="poke-img" src=${call.sprites.other.home.front_default} alt="pokeimg">
             </div>`
   imgCont.innerHTML=pokeImg
-  pokeInfo.style.background="radial-gradient(circle, rgba(172,126,162,1) 0%, rgba(42,40,159,1) 49%, rgba(68,63,66,1) 92%)"
+  pokeInfo.style.background="radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0.267) 100%)"
+  // "radial-gradient(circle, rgba(172,126,162,1) 0%, rgba(42,40,159,1) 49%, rgba(68,63,66,1) 92%)"
 }
 
 const showMessage =(text,num)=>{
